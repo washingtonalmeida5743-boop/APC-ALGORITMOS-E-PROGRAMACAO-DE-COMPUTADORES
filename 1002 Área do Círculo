@@ -1,2 +1,15 @@
-Lista de Exercícios I: Algoritmos Sequenciais
-1002 Área do Círculo
+#include <stdio.h>
+#define n 3.14159
+void multiplicador( double raio){
+double axi;
+double area;
+axi = raio * raio;
+area = axi * n;
+printf("A=%.4lf\n", area);
+}
+int main() {
+double raio;
+scanf("%lf", &raio);
+ multiplicador(raio);
+    return 0;
+}
