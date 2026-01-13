@@ -1,4 +1,5 @@
-# ALGORITMOS-E-PROGRAMA-O-DE-COMPUTADORES--APC
+APC-ALGORITMOS-E-PROGRAMACAO-DE-COMPUTADORES
+
 # 📚 Guia de Estudos - APC
 
 Este repositório serve como material de apoio para a disciplina de **Algoritmos e Programação de Computadores (APC)**. 
