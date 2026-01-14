@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+double conta(int a, double b){
+    double p = 0;
+    
+    for(int i = 0 ; i < a; i ++){
+        p += b;
+    }
+return p;
+}
+ 
+int main() {
+    
+int a, a1, b, b1;
+double a2, b2, axi, axi1, final;
+
+    scanf("%d %d %lf %d %d %lf", &a, &a1, &a2, &b, &b1, &b2);
+    
+        axi = conta(a1, a2);
+        axi1 = conta(b1, b2);
+
+        final = axi + axi1;
+    
+    printf("VALOR A PAGAR: R$ %.2lf\n", final);
+    
+return 0;
+}
