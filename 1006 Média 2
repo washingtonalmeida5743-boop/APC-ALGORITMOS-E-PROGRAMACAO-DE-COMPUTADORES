@@ -1,1 +1,18 @@
-
+#include <stdio.h>
+double media_peso(double a, double b, double c){
+//a tem peso 2, b tem peso 3 e c tem peso 5
+double a1, b1, c1;
+a1 = a*2;
+b1 = b*3;
+c1 = c*5;
+double final;
+final = ((a1 + b1 + c1)/10);
+return final;
+}
+ 
+int main() {
+double a, b, c;
+scanf("%lf %lf %lf", &a, &b, &c);
+printf("MEDIA = %.1lf\n", media_peso(a, b, c));
+    return 0;
+}
