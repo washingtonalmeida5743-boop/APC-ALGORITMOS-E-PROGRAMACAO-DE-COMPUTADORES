@@ -1,0 +1,16 @@
+#include <stdio.h>
+int diferenca(int a, int b, int c, int d){
+
+int ix1, ix2, final;
+ix1 = a * b;
+ix2 = c * d;
+final = ix1 - ix2;
+return final;
+}
+ 
+int main() {
+int a, b, c, d;
+scanf("%d %d %d %d", &a, &b, &c, &d);
+printf("DIFERENCA = %d\n", diferenca(a, b, c, d));
+    return 0;
+}
