@@ -1,0 +1,17 @@
+#include <stdio.h>
+double total(double a, double b){
+double axi;
+double final;
+axi = b * 0.15;
+final = a + axi;
+return final;
+}
+ 
+int main() {
+double a, b;
+char p[20];
+scanf("%s", &p);
+scanf("%lf %lf ", &a, &b);
+printf("TOTAL = R$ %.2lf\n", total(a, b));
+    return 0;
+}
