@@ -1,0 +1,57 @@
+#include <stdio.h>
+#define pi 3.14159
+
+void TRIANGULO(double a, double c){
+    double axi;
+    
+    axi = (a * c) / 2;
+
+    printf("TRIANGULO: %.3lf\n", axi);
+}
+
+void circulo(double R) {
+    double VOLUME;
+
+    VOLUME = pi * R * R;
+
+    printf("CIRCULO: %.3lf\n", VOLUME);
+}
+
+void TRAPEZIO(double a, double b, double c){
+    double VOLUME;
+
+    VOLUME = ((a + b)* c) /2;
+
+    printf("TRAPEZIO: %.3lf\n", VOLUME);
+}
+
+void QUADRADO(double b){
+    double VOLUME;
+
+    VOLUME = b * b;
+
+    printf("QUADRADO: %.3lf\n", VOLUME);
+}
+
+void RETANGULO(double a, double b){
+    double VOLUME;
+
+    VOLUME = a * b;
+
+    printf("RETANGULO: %.3lf\n", VOLUME);
+}
+
+ 
+int main() {
+    double a, b, c;
+
+    scanf("%lf %lf %lf", &a, &b, &c);
+    
+    TRIANGULO(a, c);
+    circulo(c);
+    TRAPEZIO(a, b, c);
+    QUADRADO(b);
+    RETANGULO(a, b);
+
+    return 0;
+}
