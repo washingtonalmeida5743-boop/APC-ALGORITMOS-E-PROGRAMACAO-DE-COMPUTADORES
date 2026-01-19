@@ -1,0 +1,23 @@
+#include <stdio.h>
+#define pi 3.14159
+
+double calcular_volume(int R) {
+
+    double VOLUME;
+
+    VOLUME = (4.0/3)*pi*R*R*R;
+    return VOLUME;
+}
+ 
+int main() {
+
+    int R;
+    double axi;
+
+    scanf("%d", &R);
+
+    axi = calcular_volume(R);
+
+    printf("VOLUME = %.3lf\n", axi);
+    return 0;
+}
