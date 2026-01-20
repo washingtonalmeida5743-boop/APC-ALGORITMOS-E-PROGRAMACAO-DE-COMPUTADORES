@@ -1,0 +1,21 @@
+#include <stdlib.h>
+
+void sub(int a, int b, int s){
+    int eh_o_maior;
+    int x;
+
+    x =(a+b+abs(a-b))/2;
+    eh_o_maior = (x+s+abs(x-s))/2;
+
+    printf("%d eh o maior\n", eh_o_maior);
+}
+
+int main(){
+    int a, b, s;
+
+    scanf("%d %d %d", &a, &b, &s);
+
+    sub(a, b, s);
+
+    return 0;
+}
