@@ -1,0 +1,21 @@
+#include <stdio.h>
+int main(){
+    
+    double x1, y1, x2, y2;
+
+scanf ("%lf %lf %lf %lf", &x1, &y1, &x2, &y2);
+    double axi, axi2;
+    axi = (x2 - x1) * (x2 - x1);
+    axi2 = (y2 - y1) * (y2 - y1);
+
+    double axi3 = axi + axi2;
+    double raiz = axi3 / 2.0;
+
+for(int i = 0; i < 20; i++){
+      raiz = (raiz + (axi3 / raiz)) / 2.0;
+}
+
+printf("%.4lf\n", raiz);
+
+    return 0;
+}
