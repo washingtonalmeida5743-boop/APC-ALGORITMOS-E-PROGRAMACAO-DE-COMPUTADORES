@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main(void) {
+    int distancia;
+    if (scanf("%d", &distancia) != 1) {
+        // entrada inválida
+        return 0;
+    }
+
+    int minutos = distancia * 2;
+    printf("%d minutos\n", minutos);
+
+    return 0;
+}
