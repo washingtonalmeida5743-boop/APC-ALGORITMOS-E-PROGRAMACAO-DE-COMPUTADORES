@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int tempo, velocidade;
+    double litros_necessarios;
+
+    scanf("%d %d", &tempo, &velocidade);
+
+    // O carro faz 12 km/l. Distância = tempo * velocidade.
+    litros_necessarios = (tempo * velocidade) / 12.0;
+
+    // Exibe o resultado com 3 casas decimais
+    printf("%.3lf\n", litros_necessarios);
+
+    return 0; 
+}
