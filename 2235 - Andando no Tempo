@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int A, B, C;
+    scanf("%d %d %d", &A, &B, &C);
+
+    int possivel = 0;
+
+    if (A == B || A == C || B == C) possivel = 1;
+
+    if (!possivel) {
+        if (A + B + C == 0 || A + B - C == 0 || A - B + C == 0 || A - B - C == 0 ||
+            -A + B + C == 0 || -A + B - C == 0 || -A - B + C == 0 || -A - B - C == 0)
+            possivel = 1;
+    }
+
+    if (possivel) printf("S\n");
+    else printf("N\n");
+
+    return 0;
+}
