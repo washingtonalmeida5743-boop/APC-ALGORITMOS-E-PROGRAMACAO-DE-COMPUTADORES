@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    double A, B, C, temp;
+    scanf("%lf %lf %lf", &A, &B, &C);
+
+    // Ordenar em ordem decrescente (A >= B >= C)
+    if (A < B) { temp = A; A = B; B = temp; }
+    if (B < C) { temp = B; B = C; C = temp; }
+    if (A < B) { temp = A; A = B; B = temp; }
+
+    // Verificações
+    if (A >= B + C) {
+        printf("NAO FORMA TRIANGULO\n");
+    } else {
+        if (fabs(A*A - (B*B + C*C)) < 1e-9) {
+            printf("TRIANGULO RETANGULO\n");
+        } else if (A*A > B*B + C*C) {
+            printf("TRIANGULO OBTUSANGULO\n");
+        } else {
+            printf("TRIANGULO ACUTANGULO\n");
+        }
+
+        if (fabs(A - B) < 1e-9 && fabs(B - C) < 1e-9) {
+            printf("TRIANGULO EQUILATERO\n");
+        } else if (fabs(A - B) < 1e-9 || fabs(A - C) < 1e-9 || fabs(B - C) < 1e-9) {
+            printf("TRIANGULO ISOSCELES\n");
+        }
+    }
+
+    return 0;
+}
