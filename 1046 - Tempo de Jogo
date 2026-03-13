@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int inicio, fim, duracao;
+
+    scanf("%d %d", &inicio, &fim);
+
+    if (inicio == fim) {
+        duracao = 24; // mesmo horário = jogo dura 24h
+    } else if (fim > inicio) {
+        duracao = fim - inicio; // mesmo dia
+    } else {
+        duracao = (24 - inicio) + fim; // passa da meia-noite
+    }
+
+    printf("O JOGO DUROU %d HORA(S)\n", duracao);
+
+    return 0;
+}
