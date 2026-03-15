@@ -1,1 +1,32 @@
+#include <stdio.h>
+ 
+int main() {
+    int contador_par, contador_impar, contador_positivo, contador_negativo;
+    int numero;
+        contador_par=0;
+        contador_impar=0;
+        contador_positivo=0;
+        contador_negativo=0;
 
+for (int i=0; i<5; i++){
+scanf("%d", &numero);
+    if (numero>0){
+    contador_positivo++;
+    }
+    if (numero<0){
+        contador_negativo++;
+    }
+    if (numero %2==0){
+       contador_par++ ;
+    }
+    if (numero %2 !=0){
+        contador_impar++;
+    }
+}
+ printf("%d valor(es) par(es)\n",  contador_par);
+ printf("%d valor(es) impar(es)\n",  contador_impar);
+printf("%d valor(es) positivo(s)\n",  contador_positivo);
+   printf("%d valor(es) negativo(s)\n",  contador_negativo);
+   
+    return 0;
+}
