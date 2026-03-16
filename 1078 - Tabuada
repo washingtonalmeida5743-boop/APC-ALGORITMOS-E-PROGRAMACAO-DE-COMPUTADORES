@@ -1,0 +1,16 @@
+#include <stdio.h>
+
+int main() {
+    int N;
+    
+    // Leitura do valor inteiro N
+    scanf("%d", &N);
+    
+    // Laço que vai de 1 até 10
+    for (int i = 1; i <= 10; i++) {
+        // Imprime a tabuada de N
+        printf("%d x %d = %d\n", i, N, i * N);
+    }
+    
+    return 0;
+}
