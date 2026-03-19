@@ -1,0 +1,44 @@
+#include <stdio.h>
+int main() {
+int ax, ax2, i=0, terminar = 0, tant=0;
+char palavra1[21];
+char palavra2[21];
+scanf("%s", &palavra1);
+scanf("%s", &palavra2);
+
+	while (palavra1[i] != '\0'){
+	   ax++;
+	   i++;
+	}
+	i=0;
+	while(palavra1[i] != '\0'){
+	   ax2++;
+	   i++;
+	}
+
+	if(ax < ax2){
+	    terminar= ax2;
+	}else{
+	    terminar = ax;
+	}
+
+	for(i=0; i < terminar; i++){
+	    if (palavra1[i]>palavra2[i]){
+		tant=1 ;
+		break;
+	    }else if(palavra2[i]>palavra1[i]) {
+        	tant=0;
+        	break;
+    		}
+	}
+
+	if(!(tant)){
+	    printf("%s\n", palavra1);
+	    printf("%s\n", palavra2);
+	}else{
+	    printf("%s\n", palavra2);
+	    printf("%s\n", palavra1);
+	}
+
+    return 0;
+}
