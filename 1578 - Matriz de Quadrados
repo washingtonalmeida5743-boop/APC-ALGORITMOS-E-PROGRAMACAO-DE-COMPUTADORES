@@ -1,0 +1,52 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    int N;
+    scanf("%d", &N);
+
+    for (int caso = 4; caso < N + 4; caso++) {
+        int M;
+        scanf("%d", &M);
+
+        unsigned long long matriz[M][M], resultado[M][M];
+        int largura[M];
+
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < M; j++) {
+                scanf("%llu", &matriz[i][j]);
+                resultado[i][j] = matriz[i][j] * matriz[i][j];
+            }
+        }
+
+        for (int j = 0; j < M; j++) {
+            largura[j] = 0;
+            for (int i = 0; i < M; i++) {
+                int dig = 1;
+                unsigned long long temp = resultado[i][j];
+                while (temp >= 10) {
+                    temp /= 10;
+                    dig++;
+                }
+                if (dig > largura[j])
+                    largura[j] = dig;
+            }
+        }
+
+        printf("Quadrado da matriz #%d:\n", caso);
+        for (int i = 0; i < M; i++) {
+            for (int j = 0; j < M; j++) {
+                if (j == 0)
+                    printf("%*llu", largura[j], resultado[i][j]);
+                else
+                    printf(" %*llu", largura[j], resultado[i][j]);
+            }
+            printf("\n");
+        }
+
+        if (caso < N + 3)
+            printf("\n");
+    }
+
+    return 0;
+}
