@@ -1,0 +1,40 @@
+#include <stdio.h>
+ 
+int main() {
+
+    int quant;
+
+    scanf("%d", &quant);
+
+    for(int i = 0; i < quant; i++){
+        char p[50];
+        char s[50];
+        char f[100];
+        int j=0, k=0;
+
+        scanf("%s %s", p, s);
+
+        for(j = 0; p[j] != '\0' && s[j] != '\0'; j ++){
+            f[k++] = p[j];
+            f[k++]=s[j];
+        }
+        int jp = j;
+        int js = j;
+
+    while (p[jp] != '\0'){
+        f[k++] = p[jp++];
+    }
+
+
+    while (s[js] != '\0'){
+        f[k++] = s[js++];
+    }
+        
+        f[k++]= '\0';
+    
+        printf("%s\n", f);
+    
+    }
+
+    return 0;
+}
