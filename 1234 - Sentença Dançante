@@ -1,0 +1,40 @@
+#include <stdio.h>
+
+int main() {
+    char d[51];
+
+    while (scanf("%[^\n]%*c", d) != EOF) {
+        
+        int i = 0;
+        int contadordematriz = 0;
+        
+        while (d[i] != '\0') {
+            contadordematriz++;
+            i++;
+        }
+
+        int proxima_deve_ser_maiuscula = 1; 
+
+        for (int j = 0; j < contadordematriz; j++) {
+
+            if ((d[j] >= 'A' && d[j] <= 'Z') || (d[j] >= 'a' && d[j] <= 'z')) {
+                
+                if (proxima_deve_ser_maiuscula) {
+                    if (d[j] >= 'a' && d[j] <= 'z') {
+                        d[j] -= 32;
+                    }
+                    proxima_deve_ser_maiuscula = 0; // A próxima será minúscula
+                } else {
+                    if (d[j] >= 'A' && d[j] <= 'Z') {
+                        d[j] += 32;
+                    }
+                    proxima_deve_ser_maiuscula = 1; // A próxima será maiúscula
+                }
+            }
+        }
+
+        printf("%s\n", d);
+    }
+
+    return 0;
+}
