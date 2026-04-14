@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int X, Y;
+    scanf("%d %d", &X, &Y);
+
+    int menor = X < Y ? X : Y;
+    int maior = X > Y ? X : Y;
+    int soma = 0;
+
+    for (int i = menor; i <= maior; i++) {
+        if (i % 13 != 0) {
+            soma += i;
+        }
+    }
+
+    printf("%d\n", soma);
+
+    return 0;
+}
+
+
